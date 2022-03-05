@@ -1,17 +1,90 @@
+body {
+  margin: 0px;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  background-color: #161616;
+}
+
 header {
-  display: fixed;
-  border: 1px solid red;
+  background-color: #1e1e1e;
+  margin: 0px;
+  width: 100%;
+  position: absolute;
+  position: sticky;
+  top: -38px;
+  filter: drop-shadow(0px 1px 10px #20202080);
+  z-index: 999;
+}
+#barrasup {
+  background-color: rgb(27, 27, 27);
+  border-bottom: 1px solid rgb(41, 41, 41);
+  border-top: 3px solid #007ac1;
+  height: 35px;
+}
+nav#sup {
+  align-items: center;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+#menu-superior {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  font-size: 0.8em;
+  padding-right: 40px;
+  margin-top: 9px;
+}
+#menu-superior a {
+  color: #bbbcbe;
+  text-decoration: none;
+  margin-left: 20px;
+}
+#menu-superior a:hover {
+  color: white;
 }
 
-div {
-  border: 1px solid red;
-  min-height: 10px;
-  display: inline-block;
+#menu {
+  background-color: #1e1e1e;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  padding: 10px 20px 10px 20px;
 }
-
+#logo img {
+  height: 50px;
+  display: flex;
+}
+#logo img:hover {
+  opacity: 0.7;
+  transition: 1s;
+  cursor: pointer;
+}
 nav {
-  border: 1px solid red;
   display: inline-block;
+}
+#main-menu a {
+  color: white;
+  margin-right: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+#main-menu a:hover {
+  color: #4baaf8;
+  transition: 1s;
+}
+#main-menu a::after {
+  content: "   ";
+  background-image: url("/images/down.svg");
+  background-size: cover;
+  position: relative;
+  display: inline-block;
+  bottom: 2px;
+  width: 8px;
+  height: 7px;
+  margin-left: 5px;
 }
 #logo {
   display: inline-block;
@@ -20,10 +93,29 @@ li {
   display: inline-block;
 }
 #slider {
-  border: 1px solid red;
+  background-image: url("/images/slider.jpg");
+  background-position: center;
   height: 40vh;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 1;
 }
 #slider-text {
-  height: 100%;
-  min-width: 40%;
+  height: 30vh;
+  width: 30vh;
+  background-color: rgba(0, 0, 0, 0.685);
+  border-radius: 100%;
+  position: absolute;
+  top: 5vh;
+  bottom: 5vh;
+  right: 10vh;
+}
+#slider-text h1 {
+  color: white;
+  font-size: 1.8em;
+  font-weight: 300;
+  text-align: center;
+  display: block;
+  position: absolute;
+  padding: 95px 0;
 }
